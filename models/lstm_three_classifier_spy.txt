@@ -1,0 +1,19 @@
+Training report — 2026-09-08T05:52:05.503751+00:00
+symbol=SPY strategy=lstm_three_classifier minutes_per_bar=1
+days_back=45 validation_days=5 label_threshold=0.001
+
+Validation results (5 day(s) held out): [datetime.date(2026, 8, 31), datetime.date(2026, 9, 1), datetime.date(2026, 9, 2), datetime.date(2026, 9, 3), datetime.date(2026, 9, 4)]
+  1min     accuracy=99.1% (naive 'HOLD always' baseline: 99.8%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'HOLD': '99%', 'SELL': '0%', 'BUY': '0%'}  predicted={'HOLD': 1935, 'SELL': 14}  actual={'HOLD': 1945, 'SELL': 3, 'BUY': 1}
+  5min     accuracy=77.1% (naive 'HOLD always' baseline: 96.8%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '11%', 'HOLD': '79%', 'BUY': '20%'}  predicted={'BUY': 221, 'SELL': 199, 'HOLD': 1525}  actual={'SELL': 28, 'HOLD': 1882, 'BUY': 35}
+  10min    accuracy=67.0% (naive 'HOLD always' baseline: 89.9%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '16%', 'HOLD': '72%', 'BUY': '23%'}  predicted={'BUY': 254, 'SELL': 334, 'HOLD': 1352}  actual={'SELL': 90, 'HOLD': 1745, 'BUY': 105}
+  30min    accuracy=43.1% (naive 'HOLD always' baseline: 66.4%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '42%', 'HOLD': '52%', 'BUY': '11%'}  predicted={'HOLD': 994, 'SELL': 787, 'BUY': 139}  actual={'SELL': 298, 'HOLD': 1275, 'BUY': 347}
+  1h       accuracy=36.0% (naive 'HOLD always' baseline: 51.7%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '64%', 'HOLD': '38%', 'BUY': '7%'}  predicted={'HOLD': 729, 'SELL': 1075, 'BUY': 86}  actual={'SELL': 418, 'HOLD': 978, 'BUY': 494}
+  2h       accuracy=43.4% (naive 'HOLD always' baseline: 36.6%)
+           recall by class={'SELL': '52%', 'HOLD': '64%', 'BUY': '12%'}  predicted={'HOLD': 1003, 'SELL': 690, 'BUY': 137}  actual={'SELL': 564, 'HOLD': 669, 'BUY': 597}
+
+Evaluation complete (6.7s)

@@ -1,0 +1,12 @@
+Training report — 2026-09-08T06:09:14.960151+00:00
+symbol=SPY strategy=lstm_three_classifier minutes_per_bar=5
+days_back=60 validation_days=10 label_threshold=0.0015
+horizon_minutes=[30, 60] strategy_kwargs={}
+
+Validation results (10 day(s) held out): [datetime.date(2026, 8, 24), datetime.date(2026, 8, 25), datetime.date(2026, 8, 26), datetime.date(2026, 8, 27), datetime.date(2026, 8, 28), datetime.date(2026, 8, 31), datetime.date(2026, 9, 1), datetime.date(2026, 9, 2), datetime.date(2026, 9, 3), datetime.date(2026, 9, 4)]
+  30min    accuracy=48.2% (naive 'HOLD always' baseline: 80.5%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'HOLD': '55%', 'SELL': '11%', 'BUY': '31%'}  predicted={'HOLD': 419, 'BUY': 268, 'SELL': 87}  actual={'HOLD': 623, 'SELL': 73, 'BUY': 78}
+  60min    accuracy=43.9% (naive 'HOLD always' baseline: 64.7%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'HOLD': '50%', 'BUY': '47%', 'SELL': '11%'}  predicted={'HOLD': 370, 'BUY': 297, 'SELL': 101}  actual={'HOLD': 497, 'BUY': 156, 'SELL': 115}
+
+Evaluation complete (1.7s)

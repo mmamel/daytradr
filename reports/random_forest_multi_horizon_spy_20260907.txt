@@ -1,0 +1,20 @@
+Training report (saved retroactively from console output)
+symbol=SPY strategy=random_forest_multi_horizon label_threshold=0.001
+model saved to: models/random_forest_multi_horizon_spy.pkl
+run timestamp: 2026-09-07 19:09:02
+
+Validation results (5 day(s) held out):
+  1min     accuracy=96.1% (naive 'HOLD always' baseline: 99.8%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'HOLD': '96%', 'SELL': '0%', 'BUY': '0%'}  predicted={'SELL': 15, 'HOLD': 1877, 'BUY': 57}  actual={'HOLD': 1945, 'SELL': 3, 'BUY': 1}
+  5min     accuracy=82.8% (naive 'HOLD always' baseline: 96.8%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '0%', 'HOLD': '85%', 'BUY': '23%'}  predicted={'BUY': 228, 'SELL': 74, 'HOLD': 1643}  actual={'SELL': 28, 'HOLD': 1882, 'BUY': 35}
+  10min    accuracy=72.7% (naive 'HOLD always' baseline: 89.9%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '2%', 'HOLD': '78%', 'BUY': '45%'}  predicted={'BUY': 403, 'SELL': 49, 'HOLD': 1488}  actual={'SELL': 90, 'HOLD': 1745, 'BUY': 105}
+  30min    accuracy=51.8% (naive 'HOLD always' baseline: 66.4%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '41%', 'HOLD': '57%', 'BUY': '43%'}  predicted={'BUY': 457, 'HOLD': 998, 'SELL': 465}  actual={'SELL': 298, 'HOLD': 1275, 'BUY': 347}
+  1h       accuracy=50.0% (naive 'HOLD always' baseline: 51.7%)  <-- barely beats always-predicting-the-majority-class!
+           recall by class={'SELL': '39%', 'HOLD': '63%', 'BUY': '33%'}  predicted={'BUY': 425, 'HOLD': 1084, 'SELL': 381}  actual={'SELL': 418, 'HOLD': 978, 'BUY': 494}
+  2h       accuracy=48.1% (naive 'HOLD always' baseline: 36.6%)
+           recall by class={'SELL': '31%', 'HOLD': '67%', 'BUY': '43%'}  predicted={'HOLD': 968, 'SELL': 292, 'BUY': 570}  actual={'SELL': 564, 'HOLD': 669, 'BUY': 597}
+
+Evaluation complete (237.0s)
