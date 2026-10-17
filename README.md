@@ -1,8 +1,5 @@
 # daytrader
 
-mma@Q-HQ7H1KQV64-mma daytrader % source .venv/bin/activate
-(.venv) mma@Q-HQ7H1KQV64-mma daytrader % pip install -r requirements.txt
-
 A day-trading app built on the Charles Schwab Trader API. Planned in three
 sections:
 
